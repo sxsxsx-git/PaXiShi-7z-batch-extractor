@@ -24,6 +24,12 @@ Designed for PaXiShi download collections.
 ## Build EXE
 - python build_gui_exe.py
 
+## CI Build and Release
+- The workflow builds a Windows EXE on tags like v1.0.0.
+- Push a tag to trigger a release upload:
+  - git tag v1.0.0
+  - git push origin v1.0.0
+
 Notes
 - Default password: 1151
 - Logs are written to process.log
