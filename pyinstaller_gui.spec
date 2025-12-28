@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['main_gui.py'],
+    ['gui_app.py'],
     pathex=[],
     binaries=[],
     datas=[('process.log', '.')],

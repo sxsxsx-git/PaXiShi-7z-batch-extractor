@@ -56,7 +56,7 @@ def build_executable():
         safe_remove(dist_dir)
     
     # 检查spec文件并删除
-    spec_file = Path("main_gui.spec")
+    spec_file = Path("pyinstaller_gui.spec")
     if spec_file.exists():
         safe_remove(spec_file)
     
@@ -70,7 +70,7 @@ def build_executable():
         "--name=7z批量解压工具",
         "--add-data=process.log;.",
         "--windowed",
-        "main_gui.py"
+        "gui_app.py"
     ]
     
     print("正在构建可执行文件...")
