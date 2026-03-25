@@ -4,22 +4,26 @@ GUI tool for renaming, extracting, and cleaning up 7z files.
 Designed for PaXiShi download collections.
 
 ## Files
-- gui_app.py: primary GUI (multiprocessing pool)
-- gui_app_threaded.py: alternate GUI (thread pool)
-- cli_app.py: CLI version (edit path/password in file)
-- cli_app_legacy.py: older CLI variant
+- gui_app.py: GUI entry (uses shared core)
+- cli_app.py: CLI entry (uses shared core)
+- paxishi_extractor/: shared pipeline + file-processing logic
 - build_gui_exe.py: build script for Windows exe
 - pyinstaller_gui.spec: PyInstaller spec for GUI build
+- tests/: pytest coverage for core logic
 
 ## Requirements
 - Python 3.9+
-- pip install py7zr tqdm
+- pip install -r requirements.txt
+
+## Development
+- pip install -r requirements-dev.txt
+- pytest
 
 ## Run GUI
 - python gui_app.py
 
 ## Run CLI
-- python cli_app.py
+- python cli_app.py --root D:/b/ --password 1151
 
 ## Build EXE
 - python build_gui_exe.py
